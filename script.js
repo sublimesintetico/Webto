@@ -54,7 +54,7 @@ function ornamentInfierno() {
             }
 
             img = document.getElementById("gif")
-            img.src = `gif/infierno/${i}.png`
+            img.src = `gif/infierno/${i}.jpg`
 
             setTimeout(() => {
                 i ++
