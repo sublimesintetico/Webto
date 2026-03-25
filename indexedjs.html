@@ -8,19 +8,39 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <script src="script.js"></script>
-        <link rel="stylesheet" href="style.css">
+        <script src="paged.polyfill.js"></script>
+
+        <script>
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    window.print();
+                }, 5000);
+            });
+        </script>
+
+        <link rel="stylesheet" href="styledjs.css">
 </head>
 
-<div class="container-0">
-    <div id="container-root" class="container">
-        <div style="height:100%; width:100%; display: flex; grid-area: 1 / 1 / 9 / 9;  z-index: 0; align-content: center; justify-content: center;">
-            <img id="gif" src="">
-        </div>
-        <div id="text-center" class="text-center">
-            <h1 style="background: none; z-index: 1; cursor:pointer;"><a onmouseleave = "reset()" onmouseover="ornamentInfierno()" onclick="revealInfierno()">El infierno también lo inventamos</a></h1>
-            <div class="colonnes" id="colonnes">
-                <p id="infierno-fill" class="text-content" style="display:none; text-align: left;"> 
+<!--<div class="index" id="index">
+    <h1></h1>
+    <div style="display: flex; align-content: baseline; justify-content: space-between; margin-left: -3cm;  margin-right: 3cm; margin-bottom: -0.7cm">
+        <p>El infierno también lo inventamos</p>
+        <p>2</p>
+    </div>
+    <div style="display: flex; align-content: baseline; justify-content: space-between; margin-left: -3cm;  margin-right: 3cm; margin-bottom: -0.7cm">
+        <p>Etc</p>
+        <p>6</p>
+    </div>
+</div> -->
+
+<div id="infierno" class="text-center">
+    <h1></h1>
+    <div class="title-page" style="background: none; z-index: 1;">
+        <p>El infierno también lo inventamos</p>
+    </div>
+    <h1 style="display: none; background: none; z-index: 1;">El infierno también lo inventamos</h1>
+        <div class="colonnes" id="colonnes">
+            <p id="infierno-fill" class="text-content" style="display:block; text-align: left;"> 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Era 8 de enero. Lo digo como si importase, en realidad no veo el propósito de las fechas. Tampoco sé por qué me acuerdo de esta fecha. Digo, seguramente por lo que estoy por contarte, pero en realidad siempre sentí que la idea de la fecha se le ocurrió a alguien que solo quería romperme las pelotas. La cuestión es que 8 de enero era y yo también, era. Porque no soy viste, por esto que estoy por contarte. <br><br> 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Es vueltero el viejo. En el fondo me chupa un huevo pero todavía le queda a mi vaso de vino y porqué no escucharlo decir sus truismos. De una forma u otra me voy a tener que entretener y en este bar ya nadie le da pelota. Carraspeo. <br> <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Si, si, ya va, impaciente. – Al lado entornan los ojos, ya se los habrá contado y va de vuelta, con su nueva copa y recobrado vigor – Era 8 de enero y así como estamos, me morí. Así como estamos digo, tan cómodos y tranquilos, ligeramente ebrios, sabés, me morí bien. – Lo decía serio, aunque yo no podía parar de pensar en cómo arrastró tan pesadamente el ligeramente que tan mal calificaba su ebriedad – Me morí bien. Tomó, me miró sin mirarme y repitió: Me morí bien. <br><br> 
@@ -38,18 +58,28 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aplastó el pucho en el cenicero, y en la montaña de ceniza llegué a ver, por un segundo, el alma incandescente que se iba del resto del cigarrillo, amarillo y muerto.<br> <br> <br> <br> </p> 
                     <p id="infierno-auth" class="text-content" style="display:none; text-align: left">Tomás Geoghegan</p>
             </div>
-
-            <h1 style="background: none; z-index: 1; cursor:pointer;"><a onclick="revealOtro()">Otro cuento</a></h1>
-            <div class="colonnes" id="colonnes"></div>
-
-            <h1 style="background: none; z-index: 1; cursor:pointer;"><a onclick="revealOtro()">Otro cuento más</a></h1>
-            <div class="colonnes" id="colonnes"></div>
-
-            <div class="abajo-info" id="abajo-info">
-                <p class="langues" id="langues"><a>Esp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  / &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a>Fr</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  / &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a>Eng</a></p>
-                <p class="web2" id="web2"><a href="indexedjs.html" onclick = "" target="blank">Print</a></p>
-            </div>
         </div>
-        
     </div>
 </div>
+
+
+<div id="infierno" class="text-center">
+    <h1></h1>
+    <div class="title-page" style="background: none; z-index: 1;">
+        <p>Otro cuento más</p>
+    </div>
+    <h1 style="display: none; background: none; z-index: 1;">El infierno también lo inventamos</h1>
+        <div class="colonnes" id="colonnes">
+            <p id="infierno-fill" class="text-content" style="display:block; text-align: left;"> </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="abajo-info" id="abajo-info">
+    <h1></h1>
+    <p class="colophon-show" id="colophon-show" >
+        El infierno también lo inventamos <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tomás Geoghegan <br><br>
+        El chico que no encontraba la muerte <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; José Nicolas Blanco Flores <br><br>
+    </p><br>
+</div> -->

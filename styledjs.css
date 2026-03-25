@@ -1,0 +1,160 @@
+p{
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+font-family: "EB Garamond", serif;
+font-weight: 400;
+font-size: 0.8em;
+letter-spacing: -0.025em;
+line-height: 0.9; 
+text-align: center;
+}
+
+h1{
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+font-family: "EB Garamond", serif;
+font-weight: 400;
+font-size: 0.8em;
+letter-spacing: -0.025em;
+line-height: 0.9; 
+text-align: center;
+}
+
+h2{
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+font-family: "EB Garamond", serif;
+font-weight: 400;
+font-size: 0.8em;
+letter-spacing: -0.025em;
+line-height: 0.9; 
+text-align: center;
+}
+
+@media screen {
+  .debug .pagedjs_margin-top .pagedjs_margin-top-left-corner,
+  .debug .pagedjs_margin-top .pagedjs_margin-top-right-corner {
+    box-shadow:0 0 0 1px inset black
+  }
+  .debug .pagedjs_margin-top>div {
+    box-shadow:0 0 0 1px inset black
+  }
+  .debug .pagedjs_margin-right>div {
+    box-shadow:0 0 0 1px inset black
+  }
+  .debug .pagedjs_margin-bottom .pagedjs_margin-bottom-left-corner,
+  .debug .pagedjs_margin-bottom .pagedjs_margin-bottom-right-corner {
+    box-shadow:0 0 0 1px inset black
+  }
+  .debug .pagedjs_margin-bottom>div {
+    box-shadow:0 0 0 1px inset black
+  }
+  .debug .pagedjs_margin-left>div {
+    box-shadow:0 0 0 1px inset black
+  }
+}
+
+@media print {
+    
+    @page {
+        size: 17cm 27cm;
+        margin-top: 1.2cm;
+        margin-bottom: 2cm;
+        margin-right: 1cm; 
+        margin-left: 7cm; 
+        bleed: 6mm;
+        marks: crop;
+        @bottom-left {
+            content: counter(page);
+            font-size: 12pt;
+            margin-left: -3cm;
+        };
+        @top-left {
+            content: string(title, first);
+            font-family: "EB Garamond", serif;
+            font-weight: 400;
+            font-size: 12pt;
+            letter-spacing: -0.025em;
+            line-height: 0.9; 
+            margin-left: -3cm;
+            margin-bottom: 0.5cm;
+        }
+    }
+
+    @page:left {
+        
+    }
+    @page:right {
+
+    }
+
+    @page:blank {
+        content: none;
+    }
+
+    .colonnes {
+        column-count: 1;
+        margin-top: 0.5em;
+        break-after: always;
+    }
+
+    .index {
+        break-after: always;
+    }
+
+    .title-page {
+        content-visibility: none;
+        break-after: always;
+    }
+
+    p{
+        font-size: 12pt;
+        text-align: left;
+        margin-right: 1.1cm;
+    }
+
+    h1{
+        font-size: 12pt;
+        text-align: left;
+        margin-bottom: 3cm;
+        string-set: title content(text);
+    }
+
+    h2{
+        font-size: 12pt;
+        text-align: left;
+        break-after: always;
+        content: none;
+    }
+
+    body {
+        break-after: page;
+    }
+
+    .text-content,
+    .colophon-show {
+        display: block;
+    }
+
+    .colophon-show {
+        break-before: page;
+        margin-top: 19cm;
+    }
+
+    .header,
+    .footer,
+    .langues {
+        display: none;
+    }
+
+    
+}

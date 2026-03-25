@@ -67,6 +67,7 @@ a:hover {
 }
 
 .text-center {
+    z-index: 12;
     grid-area: 4 / 4 / 8 / 6;
     display: block;
 }
