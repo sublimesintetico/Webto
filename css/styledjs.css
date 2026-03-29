@@ -26,6 +26,19 @@ line-height: 0.9;
 text-align: center;
 }
 
+h4{
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+font-family: "EB Garamond", serif;
+font-weight: 400;
+font-size: 0.8em;
+letter-spacing: -0.025em;
+line-height: 0.9; 
+}
+
 h2{
     user-select: none;
     -webkit-user-select: none;
@@ -38,6 +51,19 @@ font-size: 0.8em;
 letter-spacing: -0.025em;
 line-height: 0.9; 
 text-align: center;
+}
+
+h3{
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+font-family: "EB Garamond", serif;
+font-weight: 400;
+font-size: 0.8em;
+letter-spacing: -0.025em;
+line-height: 0.9; 
 }
 
 @media screen {
@@ -65,19 +91,54 @@ text-align: center;
 
 @media print {
     
+    body {
+        --paged-layout: booklet;
+        break-after: page;
+    }
+
     @page {
         size: 17cm 27cm;
         margin-top: 1.2cm;
         margin-bottom: 2cm;
+        marks: crop;
+        bleed: 6mm;
+    }
+
+    @page:left {
+        margin-top: 1.2cm;
+        margin-bottom: 2cm;
+        margin-right: 7cm; 
+        margin-left: 1cm; 
+        bleed: 6mm;
+        marks: crop;
+        @top-left {
+            content: string(title, first);
+            font-family: "EB Garamond", serif;
+            text-align: right;
+            font-weight: 400;
+            font-size: 12pt;
+            letter-spacing: -0.025em;
+            line-height: 0.9; 
+            margin-right: -3cm;
+            margin-bottom: 0.5cm;
+        }
+        @bottom-left {
+            content: string(paged, first);
+            font-family: "EB Garamond", serif;
+            font-weight: 400;
+            font-size: 12pt;
+            letter-spacing: -0.025em;
+            line-height: 0.9; 
+            text-align: right;
+            margin-right: -3cm;
+            margin-bottom: 0.5cm;
+        };
+    }
+    @page:right {
         margin-right: 1cm; 
         margin-left: 7cm; 
         bleed: 6mm;
         marks: crop;
-        @bottom-left {
-            content: counter(page);
-            font-size: 12pt;
-            margin-left: -3cm;
-        };
         @top-left {
             content: string(title, first);
             font-family: "EB Garamond", serif;
@@ -88,13 +149,16 @@ text-align: center;
             margin-left: -3cm;
             margin-bottom: 0.5cm;
         }
-    }
-
-    @page:left {
-        
-    }
-    @page:right {
-
+        @bottom-left {
+            content: string(paged, first);
+            font-family: "EB Garamond", serif;
+            font-weight: 400;
+            font-size: 12pt;
+            letter-spacing: -0.025em;
+            line-height: 0.9; 
+            margin-left: -3cm;
+            margin-bottom: 0.5cm;
+        };
     }
 
     @page:blank {
@@ -136,8 +200,18 @@ text-align: center;
         content: none;
     }
 
-    body {
-        break-after: page;
+    h4{
+        font-size: 12pt;
+        text-align: left;
+        string-set: paged content(text);    
+    }
+
+    h3 {
+        font-size: 8pt;
+        text-align: left;
+        margin-left: 1.5cm;
+        column-count: 2;
+        margin-right: -3cm;
     }
 
     .text-content,
