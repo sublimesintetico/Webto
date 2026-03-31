@@ -87,6 +87,7 @@ body {
         margin-left: 1cm; 
         bleed: 6mm;
         marks: crop;
+        
         @top-right {
             content: string(title,first);
             font-family: "EB Garamond", serif;
@@ -96,9 +97,10 @@ body {
             letter-spacing: -0.025em;
             line-height: 0.9; 
             margin-right: -3cm;
+            margin-bottom: 0.5cm;
         }
 
-        @right-top {
+        @top-right-corner {
             content: string(paginas, first);
             font-family: "EB Garamond", serif;
             text-align: right;
@@ -107,8 +109,14 @@ body {
             letter-spacing: -0.025em;
             line-height: 0.9; 
             margin-right: 4cm;
-            margin-bottom: 0.5cm;
+            margin-top: 1cm;
+            z-index: 10;
         }
+
+        @right-middle {
+            content: element(imgLeft);
+        }
+
 
         @bottom-left {
             align-content: top;
@@ -158,7 +166,7 @@ body {
             margin-bottom: 0.5cm;
         }
 
-        @left-top {
+        @top-left-corner {
             content: string(paginas, first);
             font-family: "EB Garamond", serif;
             text-align: right;
@@ -167,7 +175,11 @@ body {
             letter-spacing: -0.025em;
             line-height: 0.9; 
             margin-right: 2.6cm;
-            margin-bottom: 0.5cm;
+            margin-top: 1cm;
+        }
+
+        @left-middle {
+            content: element(imgRight);
         }
 
         @bottom-left {
@@ -200,6 +212,18 @@ body {
 
     @page:blank {
         content: none;
+    }
+
+    .ornament-marge-left {
+        position: running(imgLeft);
+        margin-top: -2cm;
+        width: 320%;
+    }
+
+    .ornament-marge-right {
+        position: running(imgRight);
+        margin-top: -2cm;
+        width: 320%;
     }
 
     .full-page-image {
