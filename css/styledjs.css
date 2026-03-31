@@ -66,40 +66,17 @@ letter-spacing: -0.025em;
 line-height: 0.9; 
 }
 
-@media screen {
-  .debug .pagedjs_margin-top .pagedjs_margin-top-left-corner,
-  .debug .pagedjs_margin-top .pagedjs_margin-top-right-corner {
-    box-shadow:0 0 0 1px inset black
-  }
-  .debug .pagedjs_margin-top>div {
-    box-shadow:0 0 0 1px inset black
-  }
-  .debug .pagedjs_margin-right>div {
-    box-shadow:0 0 0 1px inset black
-  }
-  .debug .pagedjs_margin-bottom .pagedjs_margin-bottom-left-corner,
-  .debug .pagedjs_margin-bottom .pagedjs_margin-bottom-right-corner {
-    box-shadow:0 0 0 1px inset black
-  }
-  .debug .pagedjs_margin-bottom>div {
-    box-shadow:0 0 0 1px inset black
-  }
-  .debug .pagedjs_margin-left>div {
-    box-shadow:0 0 0 1px inset black
-  }
+body {
+    --paged-layout: booklet;
+    break-after: page;
 }
 
 @media print {
-    
-    body {
-        --paged-layout: booklet;
-        break-after: page;
-    }
 
     @page {
         size: 17cm 27cm;
         margin-top: 1.2cm;
-        margin-bottom: 6.5cm;
+        margin-bottom: 6cm;
         marks: crop;
         bleed: 6mm;
     }
@@ -225,10 +202,13 @@ line-height: 0.9;
         content: none;
     }
 
+    .full-page-image {
+        --pagedjs-full-page: page
+    }
+
     .colonnes {
         column-count: 1;
         margin-top: 0.5em;
-        break-after: always;
     }
 
     .index {
