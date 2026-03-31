@@ -66,13 +66,12 @@ letter-spacing: -0.025em;
 line-height: 0.9; 
 }
 
-body {
-    --paged-layout: booklet;
-    break-after: page;
-}
-
 @media print {
 
+    body {
+    --paged-layout: booklet;
+    }
+    
     @page {
         size: 17cm 27cm;
         margin-top: 1.2cm;
